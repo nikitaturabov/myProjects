@@ -1,0 +1,4698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+    <div class="app">
+
+    </div>
+    <div class="bg_img"></div>
+</body>
+
+<script>
+    var dataHead = {
+        currentComponent: "Royalty",
+        firstStart: false,
+        preloaderSwitch: false,
+        configuration_settings_link: "#",
+        education_video_link: "https://www.youtube.com/embed/FeRO2x-FXzc",
+        preloader: {
+            settings_conf_link: "#",
+            number_create: "второго"
+        },
+        header: {
+            mistakes_link: "#",
+            dialogs_link: "#",
+            table_view_link: "#",
+            refresh_link: "#",
+            bugs_journals_link: "#",
+            bugs_db_link: "#",
+            helper_link: "#",
+            haveBugs: true,
+            mistakes: {
+                count: 999,
+                date: "2019-01-21"
+            },
+            haveNonFormedJournals: true,
+            nonFormedJournals: {
+                count: 20,
+                date: "2019-01-01"
+            },
+            time_before_sending: {
+                days: 12,
+                hours: 10
+            },
+            report_sent: false
+        },
+        clients_tab: {
+            all_clients: 118,
+            clients_bo: 78,
+            clients_no_bo: 0,
+            link: "#"
+        },
+        tab_royalty: {
+            link: "#",
+            revenue: {
+                sum: 8007560.23,
+                recalculation: +123
+            },
+            royalty: {
+                sum: 56700.23,
+                recalculation: -4567000
+            }
+        },
+        tab_dynamics: {
+            link: "#",
+        }
+    };
+    var dataClients = {
+        transferOfTechnologyView: true,
+        start_franchise_link: "#",
+        conclusion_link: "#",
+        termination_agreement_link: "#",
+        service_level: "#",
+        supplementary_agreement: "#",
+        bubbles: {
+            sales: {
+                link: "#",
+                count: 7,
+                text: "продаж за месяц"
+            },
+            growth: {
+                link: "#",
+                count: 14,
+                text: "прирост клиентов за 3 месяца"
+            }
+        },
+        data_graph_clients: [{
+                id: "complex",
+                category: "Комплесный",
+                clients: 234
+            },
+            {
+                id: "report",
+                category: "Отчётность",
+                clients: 54
+            },
+            {
+                id: "without_workers",
+                category: "Ип без работников",
+                clients: 56
+            },
+            {
+                id: "salary",
+                category: "Зарплата",
+                clients: 234
+            },
+            {
+                id: "personnel",
+                category: "Зарплата и ку",
+                clients: 34
+            },
+            {
+                id: "po_and_consult",
+                category: "ПО и консультации",
+                clients: 123
+            }
+        ],
+        board_clients: {
+
+            selectedSlice: "free_data",
+            free_data: {
+                headline: "Сводная информация",
+                color: "_0",
+                allClients: 120,
+                lastMonth: {
+                    count: 2346,
+                    link: "#",
+                    index: "neutral"
+                },
+                newClients: {
+                    count: 547345,
+                    link: "#",
+                    index: "plus"
+                },
+                dump: {
+                    count: 34574,
+                    link: "#",
+                    index: "minus"
+                }
+            },
+            complex: {
+                headline: "Комплексный сервис",
+                color: "_1",
+                allClients: "20",
+                lastMonth: {
+                    count: 354,
+                    link: "#",
+                    index: "neutral"
+                },
+                newClients: {
+                    count: 4256,
+                    link: "#",
+                    index: "plus"
+                },
+                switchedOnTechnology: {
+                    count: 2364,
+                    link: "#",
+                    index: "plus"
+                },
+                switchedOnTariff: {
+                    count: 2354,
+                    link: "#",
+                    index: "plus"
+                },
+                goneOnTariff: {
+                    count: 2354,
+                    link: "#",
+                    index: "minus"
+                },
+                suspended: {
+                    count: 235,
+                    link: "#",
+                    index: "minus"
+                },
+                dump: {
+                    count: 21,
+                    link: "#",
+                    index: "minus"
+                }
+            },
+            report: {
+                headline: "Отчётность",
+                color: "_2",
+                allClients: "23",
+                lastMonth: {
+                    count: 654,
+                    link: "#",
+                    index: "neutral"
+                },
+                newClients: {
+                    count: 546,
+                    link: "#",
+                    index: "plus"
+                },
+                switchedOnTechnology: {
+                    count: 5467,
+                    link: "#",
+                    index: "plus"
+                },
+                switchedOnTariff: {
+                    count: 197,
+                    link: "#",
+                    index: "plus"
+                },
+                goneOnTariff: {
+                    count: 12552,
+                    link: "#",
+                    index: "minus"
+                },
+                suspended: {
+                    count: 64464,
+                    link: "#",
+                    index: "minus"
+                },
+                dump: {
+                    count: 33576,
+                    link: "#",
+                    index: "minus"
+                }
+            },
+            without_workers: {
+                headline: "ИП без работников",
+                color: "_3",
+                allClients: "654",
+                lastMonth: {
+                    count: 26846,
+                    link: "#",
+                    index: "neutral",
+                },
+                newClients: {
+                    count: 253,
+                    link: "#",
+                    index: "plus"
+                },
+                switchedOnTechnology: {
+                    count: 286,
+                    link: "#",
+                    index: "plus"
+                },
+                switchedOnTariff: {
+                    count: 52039,
+                    link: "#",
+                    index: "plus"
+                },
+                goneOnTariff: {
+                    count: 3020,
+                    link: "#",
+                    index: "minus"
+                },
+                suspended: {
+                    count: 59800,
+                    link: "#",
+                    index: "minus"
+                },
+                dump: {
+                    count: 25046,
+                    link: "#",
+                    index: "minus"
+                }
+            },
+            salary: {
+                headline: "Зарплата",
+                color: "_4",
+                allClients: "243",
+                lastMonth: {
+                    count: 41802,
+                    link: "#",
+                    index: "neutral"
+                },
+                newClients: {
+                    count: 56503,
+                    link: "#",
+                    index: "plus"
+                },
+                switchedOnTechnology: {
+                    count: 805,
+                    link: "#",
+                    index: "plus"
+                },
+                switchedOnTariff: {
+                    count: 15576,
+                    link: "#",
+                    index: "plus"
+                },
+                goneOnTariff: {
+                    count: 53091,
+                    link: "#",
+                    index: "minus"
+                },
+                suspended: {
+                    count: 40178,
+                    link: "#",
+                    index: "minus"
+                },
+                dump: {
+                    count: 2803,
+                    link: "#",
+                    index: "minus"
+                }
+            },
+            personnel: {
+                headline: "Зарплата и КУ",
+                color: "_5",
+                allClients: "243",
+                lastMonth: {
+                    count: 16916,
+                    link: "#",
+                    index: "neutral"
+                },
+                newClients: {
+                    count: 21411,
+                    link: "#",
+                    index: "plus"
+                },
+                switchedOnTechnology: {
+                    count: 14231,
+                    link: "#",
+                    index: "plus"
+                },
+                switchedOnTariff: {
+                    count: 5461,
+                    link: "#",
+                    index: "plus"
+                },
+                goneOnTariff: {
+                    count: 40678,
+                    link: "#",
+                    index: "minus"
+                },
+                suspended: {
+                    count: 46983,
+                    link: "#",
+                    index: "minus"
+                },
+                dump: {
+                    count: 46431,
+                    link: "#",
+                    index: "minus"
+                }
+            },
+            po_and_consult: {
+                headline: "ПО и консультация",
+                color: "_6",
+                allClients: "34",
+                lastMonth: {
+                    count: 27269,
+                    link: "#",
+                    index: "neutral"
+                },
+                newClients: {
+                    count: 2951,
+                    link: "#",
+                    index: "plus"
+                },
+                switchedOnTechnology: {
+                    count: 59052,
+                    link: "#",
+                    index: "plus"
+                },
+                switchedOnTariff: {
+                    count: 19641,
+                    link: "#",
+                    index: "plus"
+                },
+                goneOnTariff: {
+                    count: 52310,
+                    link: "#",
+                    index: "minus"
+                },
+                suspended: {
+                    count: 58217,
+                    link: "#",
+                    index: "minus"
+                },
+                dump: {
+                    count: 63119,
+                    link: "#",
+                    index: "minus"
+                }
+            }
+        },
+        data_graph_remain_technology: [{
+                id: "clientsForTransfer",
+                category: "Перешли на технологию",
+                clients: 52
+            },
+            {
+                id: "dump",
+                category: "Отвал",
+                clients: 23
+            },
+            {
+                id: "left",
+                category: "Осталось перевести",
+                clients: 4
+            }
+        ],
+        data_table_remain_transfer: {
+            selectedSlice: "left",
+            periodHasExpired: true,
+            dayLeft: 120,
+            clientsForTransfer: {
+                headline: "Перешли на технологию",
+                list: [{
+                        name: "ООО Пчёлка",
+                        money: "8500",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ЗАО МИР",
+                        money: "10000",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ооо птица",
+                        money: "20500",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ип варежкин Л.В",
+                        money: "11000",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ооо “MATRIX”",
+                        money: "20500",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ООО топор и печка",
+                        money: "8500",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+
+                ]
+            },
+            dump: {
+                headline: "Отвал",
+                list: [{
+                        name: "ООО Пчёлка",
+                        money: "3400",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ЗАО МИР",
+                        money: "124",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ооо птица",
+                        money: "63463",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ип 44 Л.В",
+                        money: "13451",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ооо “MATRIX”",
+                        money: "23623",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ООО топор и печка",
+                        money: "8500",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "АО черчёмуха",
+                        money: "10000",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ООО тест",
+                        money: "20500",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ИП иванов А.В",
+                        money: "1500",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "Ао СМП",
+                        money: "8500",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ЗАО МИР",
+                        money: "10000",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ооо птица",
+                        money: "20500",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ип варежкин Л.В",
+                        money: "11000",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ооо “MATRIX”",
+                        money: "20500",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ООО топор и печка",
+                        money: "8500",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "АО черчёмуха",
+                        money: "10000",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ООО тест",
+                        money: "20500",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ИП иванов А.В",
+                        money: "1500",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "Ао СМП",
+                        money: "8500",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    }
+                ]
+            },
+            left: {
+                headline: "Осталось перевести",
+                list: [{
+                        name: "ООО Оса",
+                        money: "1515",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ЗАО Марс",
+                        money: "10000",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ООО тест",
+                        money: "20500",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ИП иванов А.В",
+                        money: "1500",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "Ао СМП",
+                        money: "8500",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ЗАО МИР",
+                        money: "10000",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ооо птица",
+                        money: "20500",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ип варежкин Л.В",
+                        money: "11000",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ооо “MATRIX”",
+                        money: "20500",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ООО топор и печка",
+                        money: "8500",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "АО черчёмуха",
+                        money: "10000",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ООО тест",
+                        money: "20500",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "ИП иванов А.В",
+                        money: "1500",
+                        period: "за квартал",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    },
+                    {
+                        name: "Ао СМП",
+                        money: "8500",
+                        period: "за месяц",
+                        on_technology_link: "#",
+                        change_link: "#",
+                        dump: "#"
+                    }
+                ]
+            }
+        }
+    };
+    var dataRoyalty = {
+        revenue: {
+            service:{
+                count: 650756,
+                link: "#"
+            } ,
+            onetimeServices:{
+                count: 120000,
+                link: "#"
+            } ,
+            onTechnology1c:{
+                count: 30000,
+                link: "#"
+            } ,
+            recovery:{
+                count: 10000,
+                link: "#"
+            } 
+        },
+        data_graph_revenue: [{
+                id: "complex",
+                category: "Комплесный",
+                clients: "8"
+            },
+            {
+                id: "report",
+                category: "Отчётность",
+                clients: "3"
+            },
+            {
+                id: "without_workers",
+                category: "Ип без работников",
+                clients: "2"
+            },
+            {
+                id: "salary",
+                category: "Зарплата",
+                clients: "2"
+            },
+            {
+                id: "personnel",
+                category: "Зарплата и ку",
+                clients: "2"
+            },
+            {
+                id: "po_and_consult",
+                category: "ПО и консультации",
+                clients: "2"
+            }
+        ],
+        board_revenue: {
+
+            free_data: {
+                count_journals: 150,
+                color: "_0",
+                headline: "Сводная информация",
+                summation: 234235,
+                difference: {
+                    link: "#",
+                    count: 325423,
+                    index: "plus"
+                },
+                before_correction: {
+                    link: "#",
+                    count: 3523524,
+                    index: "neutral"
+                },
+                profit_highter: {
+                    link: "#",
+                    count: 235,
+                    index: "plus"
+                },
+                added_services: {
+                    link: "#",
+                    count: 6756,
+                    index: "plus"
+                },
+                profit_below: {
+                    link: "#",
+                    count: 6756,
+                    index: "plus"
+                },
+                remove_services: {
+                    link: "#",
+                    count: 3456,
+                    index: "minus"
+                }
+            },
+            complex: {
+                color: "_1",
+                headline: "Комплексный сервис",
+                count_journals: 6,
+                summation: "20",
+                difference: {
+                    count: 325423,
+                    index: "plus"
+                },
+                before_correction: {
+                    count: 3523524,
+                    index: "neutral"
+                },
+                profit_highter: {
+                    count: 235,
+                    index: "plus"
+                },
+                added_services: {
+                    count: 6756,
+                    index: "plus"
+                },
+                profit_below: {
+                    count: 6756,
+                    index: "plus"
+                },
+                remove_services: {
+                    count: 3456,
+                    index: "minus"
+                }
+            },
+            report: {
+                color: "_2",
+                headline: "Отчётность",
+                summation: "23",
+                difference: {
+                    count: 325423,
+                    index: "plus"
+                },
+                before_correction: {
+                    count: 3523524,
+                    index: "neutral"
+                },
+                profit_highter: {
+                    count: 235,
+                    index: "plus"
+                },
+                added_services: {
+                    count: 6756,
+                    index: "plus"
+                },
+                profit_below: {
+                    count: 6756,
+                    index: "plus"
+                },
+                remove_services: {
+                    count: 3456,
+                    index: "minus"
+                }
+            },
+            without_workers: {
+                color: "_3",
+                headline: "ИП без работников",
+                summation: "654",
+                difference: {
+                    count: 325423,
+                    index: "plus"
+                },
+                before_correction: {
+                    count: 3523524,
+                    index: "neutral"
+                },
+                profit_highter: {
+                    count: 235,
+                    index: "plus"
+                },
+                added_services: {
+                    count: 6756,
+                    index: "plus"
+                },
+                profit_below: {
+                    count: 6756,
+                    index: "plus"
+                },
+                remove_services: {
+                    count: 3456,
+                    index: "minus"
+                }
+            },
+            salary: {
+                color: "_4",
+                headline: "Зарплата",
+                summation: "243",
+                difference: {
+                    count: 325423,
+                    index: "plus"
+                },
+                before_correction: {
+                    count: 3523524,
+                    index: "neutral"
+                },
+                profit_highter: {
+                    count: 235,
+                    index: "plus"
+                },
+                added_services: {
+                    count: 6756,
+                    index: "plus"
+                },
+                profit_below: {
+                    count: 6756,
+                    index: "plus"
+                },
+                remove_services: {
+                    count: 3456,
+                    index: "minus"
+                }
+            },
+            personnel: {
+                color: "_5",
+                headline: "Зарплата и КУ",
+                summation: "243",
+                difference: {
+                    count: 325423,
+                    index: "plus"
+                },
+                before_correction: {
+                    count: 3523524,
+                    index: "neutral"
+                },
+                profit_highter: {
+                    count: 235,
+                    index: "plus"
+                },
+                added_services: {
+                    count: 6756,
+                    index: "plus"
+                },
+                profit_below: {
+                    count: 6756,
+                    index: "plus"
+                },
+                remove_services: {
+                    count: 3456,
+                    index: "minus"
+                }
+            },
+            po_and_consult: {
+                color: "_6",
+                headline: "ПО и консультация",
+                summation: "34",
+                difference: {
+                    count: 325423,
+                    index: "plus"
+                },
+                before_correction: {
+                    count: 3523524,
+                    index: "neutral"
+                },
+                profit_highter: {
+                    count: 235,
+                    index: "plus"
+                },
+                added_services: {
+                    count: 6756,
+                    index: "plus"
+                },
+                profit_below: {
+                    count: 6756,
+                    index: "plus"
+                },
+                remove_services: {
+                    count: 3456,
+                    index: "minus"
+                }
+            },
+            selectedSlice: "free_data"
+        },
+        recalculation: [{
+                journal_link: "#",
+                journal: "«АО черчёмуха» за май 2018",
+                changed: "Николай Семенов",
+                itwas: 30000,
+                hasbecome: 35000,
+                revenue: -500,
+                royalty: -10
+            },
+            {
+                journal_link: "#",
+                journal: "«ООО Пчёлка» за апрель 2018",
+                changed: "Алексей Попов",
+                itwas: 30000,
+                hasbecome: 35000,
+                revenue: +4500,
+                royalty: +90
+            },
+            {
+                journal_link: "#",
+                journal: "«ООО топор и печка» за апрель 2018",
+                changed: "Николай Семенов",
+                itwas: 30000,
+                hasbecome: 35000,
+                revenue: "+2500",
+                royalty: "+50"
+            },
+            {
+                journal_link: "#",
+                journal: "«АО черчёмуха» за май 2018",
+                changed: "Николай Семенов",
+                itwas: 30000,
+                hasbecome: 35000,
+                revenue: "-500",
+                royalty: "-10"
+            }
+        ],
+        regular_service_table: [{
+                client_link: "#",
+                client: "ООО Пчёлка",
+                status: {
+                    name: "сформирован",
+                    color: "gray"
+                },
+                tariff: "Отчётность",
+                responsible: "Алексеев Д.в",
+                cost: 4865,
+                royalty: 243
+            },
+            {
+                client_link: "#",
+                client: "ЗАО МИР",
+                status: {
+                    name: "на согласовании",
+                    color: "gray"
+                },
+                tariff: "ПО и конс.",
+                responsible: "ЗАО МИР",
+                cost: 11000,
+                royalty: 555
+            },
+            {
+                client_link: "#",
+                client: "ооо птица",
+                status: {
+                    name: "Согласован клиентом",
+                    color: "green"
+                },
+                tariff: "ип без раб.",
+                responsible: "ооо птица",
+                cost: 15000,
+                royalty: 750
+            },
+            {
+                client_link: "#",
+                client: "ип варежкин Л.В",
+                status: {
+                    name: "опубликован",
+                    color: "green"
+                },
+                tariff: "зарплата",
+                responsible: "ип варежкин Л.В",
+                cost: 7800,
+                royalty: 390
+            },
+            {
+                client_link: "#",
+                client: "ооо “MATRIX”",
+                status: {
+                    name: "Согласован",
+                    color: "blue"
+                },
+                tariff: "Зарплата и ку",
+                responsible: "ооо “MATRIX”",
+                cost: 21000,
+                royalty: 1050
+            },
+            {
+                client_link: "#",
+                client: "ооо птица",
+                status: {
+                    name: "Согласован клиентом",
+                    color: "green"
+                },
+                tariff: "ип без раб.",
+                responsible: "ооо птица",
+                cost: 15000,
+                royalty: 750
+            },
+            {
+                client_link: "#",
+                client: "ип варежкин Л.В",
+                status: {
+                    name: "опубликован",
+                    color: "green"
+                },
+                tariff: "зарплата",
+                responsible: "ип варежкин Л.В",
+                cost: 7800,
+                royalty: 390
+            },
+            {
+                client_link: "#",
+                client: "ооо “MATRIX”",
+                status: {
+                    name: "Согласован",
+                    color: "blue"
+                },
+                tariff: "Зарплата и ку",
+                responsible: "ооо “MATRIX”",
+                cost: 21000,
+                royalty: 1050
+            },
+            {
+                client_link: "#",
+                client: "ооо птица",
+                status: {
+                    name: "Согласован клиентом",
+                    color: "green"
+                },
+                tariff: "ип без раб.",
+                responsible: "ооо птица",
+                cost: 15000,
+                royalty: 750
+            },
+            {
+                client_link: "#",
+                client: "ип варежкин Л.В",
+                status: {
+                    name: "опубликован",
+                    color: "green"
+                },
+                tariff: "зарплата",
+                responsible: "ип варежкин Л.В",
+                cost: 7800,
+                royalty: 390
+            },
+            {
+                client_link: "#",
+                client: "ооо “MATRIX”",
+                status: {
+                    name: "Согласован",
+                    color: "blue"
+                },
+                tariff: "Зарплата и ку",
+                responsible: "ооо “MATRIX”",
+                cost: 21000,
+                royalty: 1050
+            },
+            {
+                client_link: "#",
+                client: "ООО топор и печка",
+                status: {
+                    name: "на доработку",
+                    color: "red"
+                },
+                tariff: "Отчётность",
+                responsible: "ООО топор и печка",
+                cost: 12000,
+                royalty: 600
+            }
+        ],
+        dataProvider_graph: [{
+            category: "regular_service",
+            public: 8,
+            not_public: 5
+        }],
+        legend: {
+            public: {
+                journals: 121,
+                sum: 240000
+            },
+            not_public: {
+                journals: 320,
+                sum: 240000
+            }
+        },
+        balloon: {
+            public: [{
+                    title: "Согласовано клиентом",
+                    countJournal: 100,
+                    sum: 50000
+                },
+                {
+                    title: "Опубликован",
+                    countJournal: 20,
+                    sum: 150300
+                }
+
+            ],
+            not_public: [{
+                    title: "Сформирован",
+                    countJournal: 100,
+                    sum: 50000,
+                    class: "gray_text"
+                },
+                {
+                    title: "На согласовании",
+                    countJournal: 20,
+                    sum: 150300,
+                    class: "gray_text"
+                },
+                {
+                    title: "Согласован",
+                    countJournal: 100,
+                    sum: 50000,
+                    class: "blue_text"
+                },
+                {
+                    title: "На доработке",
+                    countJournal: 20,
+                    sum: 150300,
+                    class: "red_text"
+                },
+                {
+                    title: "Снят с публикации",
+                    countJournal: 100,
+                    sum: 50000,
+                    class: "red_text"
+                }
+            ]
+        },
+    };
+
+    //var dataDynamics = {info_message_view: true, "clients":{"clients_1cbo":{"dynamic_clients_data":[{"month":"Январь","clients":8,"dumps":0,"date":"Январь","complex":7,"unemployed":0,"accounting":0,"personnel":0,"calculate_ZP":1,"consult":0},{"month":"Февраль","clients":8,"dumps":-1,"date":"Февраль","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Март","clients":8,"dumps":0,"date":"Март","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Апрель","clients":8,"dumps":0,"date":"Апрель","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Май","clients":8,"dumps":0,"date":"Май","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Июнь","clients":8,"dumps":0,"date":"Июнь","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Июль","clients":8,"dumps":0,"date":"Июль","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Август","clients":8,"dumps":0,"date":"Август","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Сентябрь","clients":8,"dumps":0,"date":"Сентябрь","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Октябрь","clients":8,"dumps":0,"date":"Октябрь","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Ноябрь","clients":8,"dumps":0,"date":"Ноябрь","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Декабрь","clients":8,"dumps":0,"date":"Декабрь","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1}],"service_on_tariff_data":[{"month":"Январь","clients":8,"dumps":0,"date":"Январь","complex":7,"unemployed":0,"accounting":0,"personnel":0,"calculate_ZP":1,"consult":0},{"month":"Февраль","clients":8,"dumps":-1,"date":"Февраль","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Март","clients":8,"dumps":0,"date":"Март","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Апрель","clients":8,"dumps":0,"date":"Апрель","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Май","clients":8,"dumps":0,"date":"Май","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Июнь","clients":8,"dumps":0,"date":"Июнь","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Июль","clients":8,"dumps":0,"date":"Июль","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Август","clients":8,"dumps":0,"date":"Август","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Сентябрь","clients":8,"dumps":0,"date":"Сентябрь","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Октябрь","clients":8,"dumps":0,"date":"Октябрь","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Ноябрь","clients":8,"dumps":0,"date":"Ноябрь","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1},{"month":"Декабрь","clients":8,"dumps":0,"date":"Декабрь","complex":5,"unemployed":0,"accounting":1,"personnel":0,"calculate_ZP":1,"consult":1}]},"transfer_of_technology_data":[{"month":"Январь","left":0,"clients":1,"dumps":0},{"month":"Февраль","left":0,"clients":1,"dumps":0},{"month":"Март","left":0,"clients":1,"dumps":0},{"month":"Апрель","left":0,"clients":1,"dumps":0},{"month":"Май","left":0,"clients":1,"dumps":0},{"month":"Июнь","left":0,"clients":1,"dumps":0},{"month":"Июль","left":0,"clients":1,"dumps":0},{"month":"Август","left":0,"clients":1,"dumps":0},{"month":"Сентябрь","left":0,"clients":1,"dumps":0},{"month":"Октябрь","left":0,"clients":1,"dumps":0},{"month":"Ноябрь","left":0,"clients":1,"dumps":0},{"month":"Декабрь","left":0,"clients":1,"dumps":0}]},"revenues":{"total_revenues":{"total_revenues_data":[{"month":"Январь","revenue":10000},{"month":"Февраль","revenue":86280},{"month":"Март","revenue":0},{"month":"Апрель","revenue":0},{"month":"Май","revenue":0},{"month":"Июнь","revenue":0},{"month":"Июль","revenue":0},{"month":"Август","revenue":0},{"month":"Сентябрь","revenue":0},{"month":"Октябрь","revenue":0},{"month":"Ноябрь","revenue":0},{"month":"Декабрь","revenue":0}],"service_on_tariff_data":[],"by_year":[]},"together_on_technology":{"total_revenues_data":[{"month":"Январь","revenue":10000},{"month":"Февраль","revenue":86280},{"month":"Март","revenue":0},{"month":"Апрель","revenue":0},{"month":"Май","revenue":0},{"month":"Июнь","revenue":0},{"month":"Июль","revenue":0},{"month":"Август","revenue":0},{"month":"Сентябрь","revenue":0},{"month":"Октябрь","revenue":0},{"month":"Ноябрь","revenue":0},{"month":"Декабрь","revenue":0}],"service_on_tariff_data":[],"by_year":[]},"regular_service":{"total_revenues_data":[{"month":"Январь","revenue":10000},{"month":"Февраль","revenue":71280},{"month":"Март","revenue":0},{"month":"Апрель","revenue":0},{"month":"Май","revenue":0},{"month":"Июнь","revenue":0},{"month":"Июль","revenue":0},{"month":"Август","revenue":0},{"month":"Сентябрь","revenue":0},{"month":"Октябрь","revenue":0},{"month":"Ноябрь","revenue":0},{"month":"Декабрь","revenue":0}],"service_on_tariff_data":[],"by_year":[]},"one_time_services":{"total_revenues_data":[{"month":"Январь","revenue":0},{"month":"Февраль","revenue":0},{"month":"Март","revenue":0},{"month":"Апрель","revenue":0},{"month":"Май","revenue":0},{"month":"Июнь","revenue":0},{"month":"Июль","revenue":0},{"month":"Август","revenue":0},{"month":"Сентябрь","revenue":0},{"month":"Октябрь","revenue":0},{"month":"Ноябрь","revenue":0},{"month":"Декабрь","revenue":0}],"service_on_tariff_data":[],"by_year":[]},"recovery_accounting":{"total_revenues_data":[{"month":"Январь","revenue":0},{"month":"Февраль","revenue":15000},{"month":"Март","revenue":0},{"month":"Апрель","revenue":0},{"month":"Май","revenue":0},{"month":"Июнь","revenue":0},{"month":"Июль","revenue":0},{"month":"Август","revenue":0},{"month":"Сентябрь","revenue":0},{"month":"Октябрь","revenue":0},{"month":"Ноябрь","revenue":0},{"month":"Декабрь","revenue":0}],"service_on_tariff_data":[],"by_year":[]},"transfer_on_technology":{"total_revenues_data":[{"month":"Январь","revenue":0},{"month":"Февраль","revenue":0},{"month":"Март","revenue":0},{"month":"Апрель","revenue":0},{"month":"Май","revenue":0},{"month":"Июнь","revenue":0},{"month":"Июль","revenue":0},{"month":"Август","revenue":0},{"month":"Сентябрь","revenue":0},{"month":"Октябрь","revenue":0},{"month":"Ноябрь","revenue":0},{"month":"Декабрь","revenue":0}],"service_on_tariff_data":[],"by_year":[]}}};
+
+    var dataDynamics = {
+        "info_message_view": true,
+        "clients": {
+            "clients_1cbo": {
+                "dynamic_clients_data": [{
+                        "month": "Январь",
+                        "clients": 10,
+                        "dumps": 0,
+                        "date": "Январь",
+                        "complex": 7,
+                        "unemployed": 0,
+                        "accounting": 3,
+                        "personnel": 0,
+                        "calculate_ZP": 0,
+                        "consult": 0
+                    },
+                    {
+                        "month": "Февраль",
+                        "clients": 10,
+                        "dumps": 0,
+                        "date": "Февраль",
+                        "complex": 7,
+                        "unemployed": 0,
+                        "accounting": 3,
+                        "personnel": 0,
+                        "calculate_ZP": 0,
+                        "consult": 0
+                    },
+                    {
+                        "month": "Март",
+                        "clients": 10,
+                        "dumps": 0,
+                        "date": "Март",
+                        "complex": 7,
+                        "unemployed": 0,
+                        "accounting": 3,
+                        "personnel": 0,
+                        "calculate_ZP": 0,
+                        "consult": 0
+                    }
+                ],
+                "service_on_tariff_data": {
+                    array_of_values: [{
+                            "month": "Январь",
+                            "clients": 10,
+                            "dumps": 0,
+                            "date": "Январь",
+                            "complex": 7,
+                            "unemployed": 0,
+                            "accounting": 3,
+                            "personnel": 0,
+                            "calculate_ZP": 0,
+                            "consult": 0
+                        },
+                        {
+                            "month": "Февраль",
+                            "clients": 10,
+                            "dumps": 0,
+                            "date": "Февраль",
+                            "complex": 7,
+                            "unemployed": 0,
+                            "accounting": 3,
+                            "personnel": 0,
+                            "calculate_ZP": 0,
+                            "consult": 0
+                        },
+                        {
+                            "month": "Март",
+                            "clients": 10,
+                            "dumps": 0,
+                            "date": "Март",
+                            "complex": 7,
+                            "unemployed": 0,
+                            "accounting": 3,
+                            "personnel": 0,
+                            "calculate_ZP": 0,
+                            "consult": 0
+                        }
+                    ],
+                    graphs: [{
+                            bullet: "round",
+                            id: "AmGraph-1",
+                            title: "Комплексный",
+                            valueField: "complex",
+                            type: "smoothedLine",
+                            lineColor: "#EF5F50"
+                        },
+                        {
+                            bullet: "round",
+                            id: "AmGraph-2",
+                            title: "Отчётность",
+                            valueField: "accounting",
+                            type: "smoothedLine",
+                            lineColor: "#FFC700"
+                        },
+                        {
+                            bullet: "round",
+                            id: "AmGraph-3",
+                            title: "ИП без работников",
+                            valueField: "calculate_ZP",
+                            type: "smoothedLine",
+                            lineColor: "#FFA726"
+                        },
+                        {
+                            bullet: "round",
+                            id: "AmGraph-4",
+                            title: "Зарплата",
+                            valueField: "personnel",
+                            type: "smoothedLine",
+                            lineColor: "#9ACC00"
+                        },
+                        {
+                            bullet: "round",
+                            id: "AmGraph-5",
+                            title: "Зарплата и КУ",
+                            valueField: "unemployed",
+                            type: "smoothedLine",
+                            lineColor: "#25B8B6"
+                        },
+                        {
+                            bullet: "round",
+                            id: "AmGraph-6",
+                            title: "По и консульт.",
+                            valueField: "consult",
+                            type: "smoothedLine",
+                            lineColor: "#4483CC"
+                        },
+                        {
+                            bullet: "round",
+                            id: "AmGraph-7",
+                            title: "Комплексный +",
+                            valueField: "consult",
+                            type: "smoothedLine",
+                            lineColor: "#9173D0"
+                        },
+                        {
+                            bullet: "round",
+                            id: "AmGraph-8",
+                            title: "Главбух",
+                            valueField: "consult",
+                            type: "smoothedLine",
+                            lineColor: "#ED89B7"
+                        }
+                    ],
+                },
+            },
+            "transfer_of_technology_data": [{
+                    "month": "Январь",
+                    "clients": 0,
+                    "left": 0,
+                    "dumps": 0
+                },
+                {
+                    "month": "Февраль",
+                    "clients": 0,
+                    "left": 0,
+                    "dumps": 0
+                },
+                {
+                    "month": "Март",
+                    "clients": 0,
+                    "left": 0,
+                    "dumps": 0
+                }
+            ]
+        },
+        "revenues": {
+            "total_revenues": {
+                "total_revenues_data": [{
+                        "month": "Январь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Февраль",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Март",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Апрель",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Май",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Июнь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Июль",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Август",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Сентябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Октябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Ноябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Декабрь",
+                        "revenue": 0
+                    }
+                ],
+                "service_on_tariff_data": [],
+                "by_year": []
+            },
+            "together_on_technology": {
+                "total_revenues_data": [{
+                        "month": "Январь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Февраль",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Март",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Апрель",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Май",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Июнь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Июль",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Август",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Сентябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Октябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Ноябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Декабрь",
+                        "revenue": 0
+                    }
+                ],
+                "service_on_tariff_data": [],
+                "by_year": []
+            },
+            "regular_service": {
+                "total_revenues_data": [{
+                        "month": "Январь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Февраль",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Март",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Апрель",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Май",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Июнь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Июль",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Август",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Сентябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Октябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Ноябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Декабрь",
+                        "revenue": 0
+                    }
+                ],
+                "service_on_tariff_data": [],
+                "by_year": []
+            },
+            "one_time_services": {
+                "total_revenues_data": [{
+                        "month": "Январь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Февраль",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Март",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Апрель",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Май",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Июнь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Июль",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Август",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Сентябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Октябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Ноябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Декабрь",
+                        "revenue": 0
+                    }
+                ],
+                "service_on_tariff_data": [],
+                "by_year": []
+            },
+            "recovery_accounting": {
+                "total_revenues_data": [{
+                        "month": "Январь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Февраль",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Март",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Апрель",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Май",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Июнь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Июль",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Август",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Сентябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Октябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Ноябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Декабрь",
+                        "revenue": 0
+                    }
+                ],
+                "service_on_tariff_data": [],
+                "by_year": []
+            },
+            "transfer_on_technology": {
+                "total_revenues_data": [{
+                        "month": "Январь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Февраль",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Март",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Апрель",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Май",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Июнь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Июль",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Август",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Сентябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Октябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Ноябрь",
+                        "revenue": 0
+                    },
+                    {
+                        "month": "Декабрь",
+                        "revenue": 0
+                    }
+                ],
+                "service_on_tariff_data": [],
+                "by_year": []
+            }
+        }
+    };
+
+
+    // var dataDynamics = {
+    //     info_message_view: true,
+    //     clients: {
+    //         clients_1cbo: {
+    //             dynamic_clients_data: [{
+    //                     month: "январь",
+    //                     clients: 112,
+    //                     dumps: -5
+    //                 },
+    //                 {
+    //                     month: "февраль",
+    //                     clients: 236,
+    //                     dumps: -37
+    //                 },
+    //                 {
+    //                     month: "март",
+    //                     clients: 232,
+    //                     dumps: -53
+    //                 },
+    //                 {
+    //                     month: "апрель",
+    //                     clients: 334,
+    //                     dumps: -34
+    //                 },
+    //                 {
+    //                     month: "июнь",
+    //                     clients: 354,
+    //                     dumps: -84
+    //                 },
+    //                 {
+    //                     month: "июль",
+    //                     clients: 453,
+    //                     dumps: -44
+    //                 },
+    //                 {
+    //                     month: "август",
+    //                     clients: 567,
+    //                     dumps: -349
+    //                 },
+    //                 {
+    //                     month: "сентябрь",
+    //                     clients: 134,
+    //                     dumps: -14
+    //                 },
+    //                 {
+    //                     month: "октябрь",
+    //                     clients: 679,
+    //                     dumps: -43
+    //                 },
+    //                 {
+    //                     month: "ноябрь",
+    //                     clients: 458,
+    //                     dumps: -64
+    //                 },
+    //                 {
+    //                     month: "декабрь",
+    //                     clients: 234,
+    //                     dumps: -68
+    //                 }
+    //             ],
+    //             service_on_tariff_data: [{
+    //                     date: "2019-01",
+    //                     complex: 8,
+    //                     accounting: 5,
+    //                     calculate_ZP: 52,
+    //                     personnel: 64,
+    //                     unemployed: 17,
+    //                     consult: 88,
+    //                     formed_journal: "formed",
+    //                     colorField: "#000000"
+    //                 },
+    //                 {
+    //                     date: "2019-02",
+    //                     complex: 6,
+    //                     accounting: 7,
+    //                     calculate_ZP: 50,
+    //                     personnel: 7,
+    //                     unemployed: 25,
+    //                     consult: 31,
+    //                     formed_journal: "formed"
+    //                 },
+    //                 {
+    //                     date: "2019-03",
+    //                     complex: 2,
+    //                     accounting: 3,
+    //                     calculate_ZP: 9,
+    //                     personnel: 57,
+    //                     unemployed: 52,
+    //                     consult: 97,
+    //                     formed_journal: "formed"
+    //                 },
+    //                 {
+    //                     date: "2019-04",
+    //                     complex: 1,
+    //                     accounting: 3,
+    //                     calculate_ZP: 56,
+    //                     personnel: 42,
+    //                     unemployed: 95,
+    //                     consult: 38,
+    //                     formed_journal: "formed",
+    //                     columnColor: "#554433"
+    //                 },
+    //                 {
+    //                     date: "2019-05",
+    //                     complex: 2,
+    //                     accounting: 1,
+    //                     calculate_ZP: 11,
+    //                     personnel: 48,
+    //                     unemployed: 0,
+    //                     consult: 27,
+    //                     formed_journal: "formed"
+    //                 },
+    //                 {
+    //                     date: "2019-06",
+    //                     complex: 3,
+    //                     accounting: 2,
+    //                     calculate_ZP: 78,
+    //                     personnel: 69,
+    //                     unemployed: 62,
+    //                     consult: 4,
+    //                     formed_journal: "formed"
+    //                 },
+    //                 {
+    //                     date: "2019-07",
+    //                     complex: 6,
+    //                     accounting: 8,
+    //                     calculate_ZP: 58,
+    //                     personnel: 8,
+    //                     unemployed: 32,
+    //                     consult: 64,
+    //                     formed_journal: "formed"
+    //                 },
+    //                 {
+    //                     date: "2019-08",
+    //                     complex: 2,
+    //                     accounting: 3,
+    //                     calculate_ZP: 9,
+    //                     personnel: 57,
+    //                     unemployed: 52,
+    //                     consult: 97,
+    //                     formed_journal: "formed"
+    //                 },
+    //                 {
+    //                     date: "2019-09",
+    //                     complex: 1,
+    //                     accounting: 3,
+    //                     calculate_ZP: 56,
+    //                     personnel: 42,
+    //                     unemployed: 95,
+    //                     consult: 38,
+    //                     formed_journal: "formed"
+    //                 },
+    //                 {
+    //                     date: "2019-10",
+    //                     complex: 2,
+    //                     accounting: 1,
+    //                     calculate_ZP: 11,
+    //                     personnel: 48,
+    //                     unemployed: 0,
+    //                     consult: 27,
+    //                     formed_journal: "formed"
+    //                 },
+    //                 {
+    //                     date: "2019-11",
+    //                     complex: 3,
+    //                     accounting: 2,
+    //                     calculate_ZP: 78,
+    //                     personnel: 69,
+    //                     unemployed: 62,
+    //                     consult: 4,
+    //                     formed_journal: "formed"
+    //                 },
+    //                 {
+    //                     date: "2019-12",
+    //                     complex: 6,
+    //                     accounting: 8,
+    //                     calculate_ZP: 58,
+    //                     personnel: 8,
+    //                     unemployed: 32,
+    //                     consult: 64,
+    //                     formed_journal: "formed"
+    //                 }
+    //             ],
+    //         },
+    //         transfer_of_technology_data: [{
+    //                 month: "январь",
+    //                 left: 123,
+    //                 clients: 112,
+    //                 dumps: -5
+    //             },
+    //             {
+    //                 month: "февраль",
+    //                 left: 123,
+    //                 clients: 236,
+    //                 dumps: -37
+    //             },
+    //             {
+    //                 month: "март",
+    //                 left: 123,
+    //                 clients: 232,
+    //                 dumps: -53
+    //             },
+    //             {
+    //                 month: "апрель",
+    //                 left: 123,
+    //                 clients: 334,
+    //                 dumps: -34
+    //             },
+    //             {
+    //                 month: "июнь",
+    //                 left: 123,
+    //                 clients: 354,
+    //                 dumps: -84
+    //             },
+    //             {
+    //                 month: "июль",
+    //                 left: 123,
+    //                 clients: 453,
+    //                 dumps: -44
+    //             },
+    //             {
+    //                 month: "август",
+    //                 left: 123,
+    //                 clients: 567,
+    //                 dumps: -349
+    //             },
+    //             {
+    //                 month: "сентябрь",
+    //                 left: 123,
+    //                 clients: 134,
+    //                 dumps: -14
+    //             },
+    //             {
+    //                 month: "октябрь",
+    //                 left: 123,
+    //                 clients: 679,
+    //                 dumps: -43
+    //             },
+    //             {
+    //                 month: "ноябрь",
+    //                 left: 123,
+    //                 clients: -458,
+    //                 dumps: -644
+    //             },
+    //             {
+    //                 month: "декабрь",
+    //                 left: 123,
+    //                 clients: 234,
+    //                 dumps: -68
+    //             }
+    //         ],
+    //     },
+    //     revenues: {
+    //         total_revenues: {
+    //             total_revenues_data: [{
+    //                     month: "январь",
+    //                     revenue: 112
+    //                 },
+    //                 {
+    //                     month: "февраль",
+    //                     revenue: 236
+    //                 },
+    //                 {
+    //                     month: "март",
+    //                     revenue: 232
+    //                 },
+    //                 {
+    //                     month: "апрель",
+    //                     revenue: 334
+    //                 },
+    //                 {
+    //                     month: "май",
+    //                     revenue: 354
+    //                 },
+    //                 {
+    //                     month: "июнь",
+    //                     revenue: 354
+    //                 },
+    //                 {
+    //                     month: "июль",
+    //                     revenue: 453
+    //                 },
+    //                 {
+    //                     month: "август",
+    //                     revenue: 567
+    //                 },
+    //                 {
+    //                     month: "сентябрь",
+    //                     revenue: 134
+    //                 },
+    //                 {
+    //                     month: "октябрь",
+    //                     revenue: 679
+    //                 },
+    //                 {
+    //                     month: "ноябрь",
+    //                     revenue: 458
+    //                 },
+    //                 {
+    //                     month: "декабрь",
+    //                     revenue: 234
+    //                 }
+    //             ],
+    //             service_on_tariff_data: [{
+    //                     category: "январь",
+    //                     formed: 23540,
+    //                     published: 2345
+    //                 },
+    //                 {
+    //                     category: "февраль",
+    //                     formed: 12340,
+    //                     published: 0
+    //                 },
+    //                 {
+    //                     category: "март",
+    //                     formed: 1230,
+    //                     published: 2340
+    //                 },
+    //                 {
+    //                     category: "апрель",
+    //                     formed: 12340,
+    //                     published: 3240
+    //                 },
+    //                 {
+    //                     category: "май",
+    //                     formed: 2140,
+    //                     published: 21340
+    //                 },
+    //                 {
+    //                     category: "июнь",
+    //                     formed: 3470,
+    //                     published: 23420
+    //                 },
+    //                 {
+    //                     category: "июль",
+    //                     formed: 23460,
+    //                     published: 32130
+    //                 },
+    //                 {
+    //                     category: "август",
+    //                     formed: 33240,
+    //                     published: 52340
+    //                 },
+    //                 {
+    //                     category: "сентябрь",
+    //                     formed: 2143,
+    //                     published: 1345
+    //                 },
+    //                 {
+    //                     category: "октябрь",
+    //                     formed: 5464,
+    //                     published: 3453
+    //                 },
+    //                 {
+    //                     category: "ноябрь",
+    //                     formed: 352,
+    //                     published: 123
+    //                 },
+    //                 {
+    //                     category: "декабрь",
+    //                     formed: 13,
+    //                     published: 53
+    //                 }
+    //             ],
+    //             by_year: [{
+    //                     title: "Январь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 4563,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 345346,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Февраль 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Март 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Апрель 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 245000,
+    //                     po_and_consult: 4567
+    //                 },
+    //                 {
+    //                     title: "Май 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 55888,
+    //                     complex: 778,
+    //                     reports: 457,
+    //                     without_workers: 2000,
+    //                     salary: 567834,
+    //                     salary_and_ku: 393234,
+    //                     po_and_consult: 67593
+    //                 },
+    //                 {
+    //                     title: "Июнь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 356783,
+    //                     complex: 356,
+    //                     reports: 6795,
+    //                     without_workers: 3457,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3457
+    //                 },
+    //                 {
+    //                     title: "Июль 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 3674,
+    //                     complex: 5685,
+    //                     reports: 45683,
+    //                     without_workers: 3456,
+    //                     salary: 7887,
+    //                     salary_and_ku: 4567,
+    //                     po_and_consult: 708
+    //                 },
+    //                 {
+    //                     title: "Август 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 368,
+    //                     complex: 3356830,
+    //                     reports: 3568356,
+    //                     without_workers: 345,
+    //                     salary: 393634,
+    //                     salary_and_ku: 769,
+    //                     po_and_consult: 3457
+    //                 },
+    //                 {
+    //                     title: "Сентябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 55230,
+    //                     complex: 45,
+    //                     reports: 657,
+    //                     without_workers: 3456,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Октябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 56,
+    //                     complex: 3468,
+    //                     reports: 347,
+    //                     without_workers: 3457,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Ноябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 345734,
+    //                     complex: 43563,
+    //                     reports: 45636,
+    //                     without_workers: 7457,
+    //                     salary: 5464,
+    //                     salary_and_ku: 45645,
+    //                     po_and_consult: 234523
+    //                 },
+    //                 {
+    //                     title: "Декабрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 2345,
+    //                     complex: 2354,
+    //                     reports: 2354,
+    //                     without_workers: 4564,
+    //                     salary: 2354,
+    //                     salary_and_ku: 45645,
+    //                     po_and_consult: 2345
+    //                 }
+    //             ]
+    //         },
+    //         together_on_technology: {
+    //             total_revenues_data: [{
+    //                     month: "retwertye",
+    //                     revenue: 112
+    //                 },
+    //                 {
+    //                     month: "февраль",
+    //                     revenue: 236
+    //                 },
+    //                 {
+    //                     month: "март",
+    //                     revenue: 232
+    //                 },
+    //                 {
+    //                     month: "апрель",
+    //                     revenue: 334
+    //                 },
+    //                 {
+    //                     month: "май",
+    //                     revenue: 354
+    //                 },
+    //                 {
+    //                     month: "июнь",
+    //                     revenue: 354
+    //                 },
+    //                 {
+    //                     month: "июль",
+    //                     revenue: 453
+    //                 },
+    //                 {
+    //                     month: "август",
+    //                     revenue: 567
+    //                 },
+    //                 {
+    //                     month: "сентябрь",
+
+    //                     revenue: 134
+    //                 },
+    //                 {
+    //                     month: "октябрь",
+    //                     revenue: 679
+    //                 },
+    //                 {
+    //                     month: "ноябрь",
+    //                     revenue: 458
+    //                 },
+    //                 {
+    //                     month: "декабрь",
+    //                     revenue: 234
+    //                 }
+    //             ],
+    //             service_on_tariff_data: [{
+    //                     category: "2019-01-01",
+    //                     formed: 23540,
+    //                     published: 2345
+    //                 },
+    //                 {
+    //                     category: "2019-02-01",
+    //                     formed: 4586546,
+    //                     published: 458645864
+    //                 },
+    //                 {
+    //                     category: "2019-03-01",
+    //                     formed: 5476475,
+    //                     published: 4586458
+    //                 },
+    //                 {
+    //                     category: "2019-04-01",
+    //                     formed: 12340,
+    //                     published: 3240
+    //                 },
+    //                 {
+    //                     category: "2019-05-01",
+    //                     formed: 2140,
+    //                     published: 21340
+    //                 },
+    //                 {
+    //                     category: "2019-06-01",
+    //                     formed: 2346,
+    //                     published: 32462346
+    //                 },
+    //                 {
+    //                     category: "2019-07-01",
+    //                     formed: 23460,
+    //                     published: 32130
+    //                 },
+    //                 {
+    //                     category: "2019-08-01",
+    //                     formed: 33240,
+    //                     published: 52340
+    //                 },
+    //                 {
+    //                     category: "2019-09-01",
+    //                     formed: 2143,
+    //                     published: 1345
+    //                 },
+    //                 {
+    //                     category: "2019-10-01",
+    //                     formed: 5464,
+    //                     published: 3453
+    //                 },
+    //                 {
+    //                     category: "2019-11-01",
+    //                     formed: 352,
+    //                     published: 123
+    //                 },
+    //                 {
+    //                     category: "2019-12-01",
+    //                     formed: 13,
+    //                     published: 53
+    //                 }
+    //             ],
+    //             by_year: [{
+    //                     title: "Январь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 4563,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 345346,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Февраль 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Март 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Апрель 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 245000,
+    //                     po_and_consult: 4567
+    //                 },
+    //                 {
+    //                     title: "Май 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 2345,
+    //                     complex: 32452346,
+    //                     reports: 4573457,
+    //                     without_workers: 324623,
+    //                     salary: 32465,
+    //                     salary_and_ku: 234632,
+    //                     po_and_consult: 23632
+    //                 },
+    //                 {
+    //                     title: "Июнь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 356783,
+    //                     complex: 356,
+    //                     reports: 6795,
+    //                     without_workers: 3457,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3457
+    //                 },
+    //                 {
+    //                     title: "Июль 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 3674,
+    //                     complex: 5685,
+    //                     reports: 45683,
+    //                     without_workers: 3456,
+    //                     salary: 7887,
+    //                     salary_and_ku: 4567,
+    //                     po_and_consult: 708
+    //                 },
+    //                 {
+    //                     title: "Август 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 368,
+    //                     complex: 3356830,
+    //                     reports: 3568356,
+    //                     without_workers: 345,
+    //                     salary: 393634,
+    //                     salary_and_ku: 769,
+    //                     po_and_consult: 3457
+    //                 },
+    //                 {
+    //                     title: "Сентябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 55230,
+    //                     complex: 45,
+    //                     reports: 657,
+    //                     without_workers: 3456,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Октябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 56,
+    //                     complex: 3468,
+    //                     reports: 347,
+    //                     without_workers: 3457,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Ноябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 345734,
+    //                     complex: 43563,
+    //                     reports: 45636,
+    //                     without_workers: 7457,
+    //                     salary: 5464,
+    //                     salary_and_ku: 45645,
+    //                     po_and_consult: 234523
+    //                 },
+    //                 {
+    //                     title: "Декабрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 2345,
+    //                     complex: 2354,
+    //                     reports: 2354,
+    //                     without_workers: 4564,
+    //                     salary: 2354,
+    //                     salary_and_ku: 45645,
+    //                     po_and_consult: 2345
+    //                 }
+    //             ]
+    //         },
+    //         regular_service: {
+    //             total_revenues_data: [{
+    //                     month: "январь",
+    //                     revenue: 112
+    //                 },
+    //                 {
+    //                     month: "февраль",
+    //                     revenue: 236
+    //                 },
+    //                 {
+    //                     month: "март",
+    //                     revenue: 232
+    //                 },
+    //                 {
+    //                     month: "апрель",
+    //                     revenue: 334
+    //                 },
+    //                 {
+    //                     month: "май",
+    //                     revenue: 354
+    //                 },
+    //                 {
+    //                     month: "июнь",
+    //                     revenue: 354
+    //                 },
+    //                 {
+    //                     month: "июль",
+    //                     revenue: 453
+    //                 },
+    //                 {
+    //                     month: "август",
+    //                     revenue: 567
+    //                 },
+    //                 {
+    //                     month: "сентябрь",
+
+    //                     revenue: 134
+    //                 },
+    //                 {
+    //                     month: "октябрь",
+    //                     revenue: 679
+    //                 },
+    //                 {
+    //                     month: "ноябрь",
+    //                     revenue: 458
+    //                 },
+    //                 {
+    //                     month: "декабрь",
+    //                     revenue: 234
+    //                 }
+    //             ],
+    //             service_on_tariff_data: [{
+    //                     category: "2019-01-01",
+    //                     formed: 23540,
+    //                     published: 2345
+    //                 },
+    //                 {
+    //                     category: "2019-02-01",
+    //                     formed: 12340,
+    //                     published: 0
+    //                 },
+    //                 {
+    //                     category: "2019-03-01",
+    //                     formed: 1230,
+    //                     published: 2340
+    //                 },
+    //                 {
+    //                     category: "2019-04-01",
+    //                     formed: 12340,
+    //                     published: 3240
+    //                 },
+    //                 {
+    //                     category: "2019-05-01",
+    //                     formed: 2140,
+    //                     published: 21340
+    //                 },
+    //                 {
+    //                     category: "2019-06-01",
+    //                     formed: 3470,
+    //                     published: 23420
+    //                 },
+    //                 {
+    //                     category: "2019-07-01",
+    //                     formed: 23460,
+    //                     published: 32130
+    //                 },
+    //                 {
+    //                     category: "2019-08-01",
+    //                     formed: 33240,
+    //                     published: 52340
+    //                 },
+    //                 {
+    //                     category: "2019-09-01",
+    //                     formed: 2143,
+    //                     published: 1345
+    //                 },
+    //                 {
+    //                     category: "2019-10-01",
+    //                     formed: 5464,
+    //                     published: 3453
+    //                 },
+    //                 {
+    //                     category: "2019-11-01",
+    //                     formed: 352,
+    //                     published: 123
+    //                 },
+    //                 {
+    //                     category: "2019-12-01",
+    //                     formed: 13,
+    //                     published: 53
+    //                 }
+    //             ],
+    //             by_year: [{
+    //                     title: "Январь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 4563,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 345346,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Февраль 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Март 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Апрель 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 245000,
+    //                     po_and_consult: 4567
+    //                 },
+    //                 {
+    //                     title: "Май 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 55888,
+    //                     complex: 778,
+    //                     reports: 457,
+    //                     without_workers: 2000,
+    //                     salary: 567834,
+    //                     salary_and_ku: 393234,
+    //                     po_and_consult: 67593
+    //                 },
+    //                 {
+    //                     title: "Июнь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 356783,
+    //                     complex: 356,
+    //                     reports: 6795,
+    //                     without_workers: 3457,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3457
+    //                 },
+    //                 {
+    //                     title: "Июль 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 3674,
+    //                     complex: 5685,
+    //                     reports: 45683,
+    //                     without_workers: 3456,
+    //                     salary: 7887,
+    //                     salary_and_ku: 4567,
+    //                     po_and_consult: 708
+    //                 },
+    //                 {
+    //                     title: "Август 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 368,
+    //                     complex: 3356830,
+    //                     reports: 3568356,
+    //                     without_workers: 345,
+    //                     salary: 393634,
+    //                     salary_and_ku: 769,
+    //                     po_and_consult: 3457
+    //                 },
+    //                 {
+    //                     title: "Сентябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 55230,
+    //                     complex: 45,
+    //                     reports: 657,
+    //                     without_workers: 3456,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Октябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 56,
+    //                     complex: 3468,
+    //                     reports: 347,
+    //                     without_workers: 3457,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Ноябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 345734,
+    //                     complex: 43563,
+    //                     reports: 45636,
+    //                     without_workers: 7457,
+    //                     salary: 5464,
+    //                     salary_and_ku: 45645,
+    //                     po_and_consult: 234523
+    //                 },
+    //                 {
+    //                     title: "Декабрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 2345,
+    //                     complex: 2354,
+    //                     reports: 2354,
+    //                     without_workers: 4564,
+    //                     salary: 2354,
+    //                     salary_and_ku: 45645,
+    //                     po_and_consult: 2345
+    //                 }
+    //             ]
+    //         },
+    //         one_time_services: {
+    //             total_revenues_data: [{
+    //                     month: "январь",
+    //                     revenue: 112
+    //                 },
+    //                 {
+    //                     month: "февраль",
+    //                     revenue: 236
+    //                 },
+    //                 {
+    //                     month: "март",
+    //                     revenue: 232
+    //                 },
+    //                 {
+    //                     month: "апрель",
+    //                     revenue: 334
+    //                 },
+    //                 {
+    //                     month: "май",
+    //                     revenue: 354
+    //                 },
+    //                 {
+    //                     month: "июнь",
+    //                     revenue: 354
+    //                 },
+    //                 {
+    //                     month: "июль",
+    //                     revenue: 453
+    //                 },
+    //                 {
+    //                     month: "август",
+    //                     revenue: 567
+    //                 },
+    //                 {
+    //                     month: "сентябрь",
+
+    //                     revenue: 134
+    //                 },
+    //                 {
+    //                     month: "октябрь",
+    //                     revenue: 679
+    //                 },
+    //                 {
+    //                     month: "ноябрь",
+    //                     revenue: 458
+    //                 },
+    //                 {
+    //                     month: "декабрь",
+    //                     revenue: 234
+    //                 }
+    //             ],
+    //             service_on_tariff_data: [{
+    //                     category: "2019-01-01",
+    //                     formed: 23540,
+    //                     published: 2345
+    //                 },
+    //                 {
+    //                     category: "2019-02-01",
+    //                     formed: 12340,
+    //                     published: 0
+    //                 },
+    //                 {
+    //                     category: "2019-03-01",
+    //                     formed: 1230,
+    //                     published: 2340
+    //                 },
+    //                 {
+    //                     category: "2019-04-01",
+    //                     formed: 12340,
+    //                     published: 3240
+    //                 },
+    //                 {
+    //                     category: "2019-05-01",
+    //                     formed: 2140,
+    //                     published: 21340
+    //                 },
+    //                 {
+    //                     category: "2019-06-01",
+    //                     formed: 3470,
+    //                     published: 23420
+    //                 },
+    //                 {
+    //                     category: "2019-07-01",
+    //                     formed: 23460,
+    //                     published: 32130
+    //                 },
+    //                 {
+    //                     category: "2019-08-01",
+    //                     formed: 33240,
+    //                     published: 52340
+    //                 },
+    //                 {
+    //                     category: "2019-09-01",
+    //                     formed: 2143,
+    //                     published: 1345
+    //                 },
+    //                 {
+    //                     category: "2019-10-01",
+    //                     formed: 5464,
+    //                     published: 3453
+    //                 },
+    //                 {
+    //                     category: "2019-11-01",
+    //                     formed: 352,
+    //                     published: 123
+    //                 },
+    //                 {
+    //                     category: "2019-12-01",
+    //                     formed: 13,
+    //                     published: 53
+    //                 }
+    //             ],
+    //             by_year: [{
+    //                     title: "Январь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 4563,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 345346,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Февраль 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Март 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Апрель 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 245000,
+    //                     po_and_consult: 4567
+    //                 },
+    //                 {
+    //                     title: "Май 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 55888,
+    //                     complex: 778,
+    //                     reports: 457,
+    //                     without_workers: 2000,
+    //                     salary: 567834,
+    //                     salary_and_ku: 393234,
+    //                     po_and_consult: 67593
+    //                 },
+    //                 {
+    //                     title: "Июнь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 356783,
+    //                     complex: 356,
+    //                     reports: 6795,
+    //                     without_workers: 3457,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3457
+    //                 },
+    //                 {
+    //                     title: "Июль 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 3674,
+    //                     complex: 5685,
+    //                     reports: 45683,
+    //                     without_workers: 3456,
+    //                     salary: 7887,
+    //                     salary_and_ku: 4567,
+    //                     po_and_consult: 708
+    //                 },
+    //                 {
+    //                     title: "Август 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 368,
+    //                     complex: 3356830,
+    //                     reports: 3568356,
+    //                     without_workers: 345,
+    //                     salary: 393634,
+    //                     salary_and_ku: 769,
+    //                     po_and_consult: 3457
+    //                 },
+    //                 {
+    //                     title: "Сентябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 55230,
+    //                     complex: 45,
+    //                     reports: 657,
+    //                     without_workers: 3456,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Октябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 56,
+    //                     complex: 3468,
+    //                     reports: 347,
+    //                     without_workers: 3457,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Ноябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 345734,
+    //                     complex: 43563,
+    //                     reports: 45636,
+    //                     without_workers: 7457,
+    //                     salary: 5464,
+    //                     salary_and_ku: 45645,
+    //                     po_and_consult: 234523
+    //                 },
+    //                 {
+    //                     title: "Декабрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 2345,
+    //                     complex: 2354,
+    //                     reports: 2354,
+    //                     without_workers: 4564,
+    //                     salary: 2354,
+    //                     salary_and_ku: 45645,
+    //                     po_and_consult: 2345
+    //                 }
+    //             ]
+    //         },
+    //         recovery_accounting: {
+    //             total_revenues_data: [{
+    //                     month: "январь",
+    //                     revenue: 112
+    //                 },
+    //                 {
+    //                     month: "февраль",
+    //                     revenue: 236
+    //                 },
+    //                 {
+    //                     month: "март",
+    //                     revenue: 232
+    //                 },
+    //                 {
+    //                     month: "апрель",
+    //                     revenue: 334
+    //                 },
+    //                 {
+    //                     month: "май",
+    //                     revenue: 354
+    //                 },
+    //                 {
+    //                     month: "июнь",
+    //                     revenue: 354
+    //                 },
+    //                 {
+    //                     month: "июль",
+    //                     revenue: 453
+    //                 },
+    //                 {
+    //                     month: "август",
+    //                     revenue: 567
+    //                 },
+    //                 {
+    //                     month: "сентябрь",
+
+    //                     revenue: 134
+    //                 },
+    //                 {
+    //                     month: "октябрь",
+    //                     revenue: 679
+    //                 },
+    //                 {
+    //                     month: "ноябрь",
+    //                     revenue: 458
+    //                 },
+    //                 {
+    //                     month: "декабрь",
+    //                     revenue: 234
+    //                 }
+    //             ],
+    //             service_on_tariff_data: [{
+    //                     category: "2019-01-01",
+    //                     formed: 23540,
+    //                     published: 2345
+    //                 },
+    //                 {
+    //                     category: "2019-02-01",
+    //                     formed: 12340,
+    //                     published: 0
+    //                 },
+    //                 {
+    //                     category: "2019-03-01",
+    //                     formed: 1230,
+    //                     published: 2340
+    //                 },
+    //                 {
+    //                     category: "2019-04-01",
+    //                     formed: 12340,
+    //                     published: 3240
+    //                 },
+    //                 {
+    //                     category: "2019-05-01",
+    //                     formed: 2140,
+    //                     published: 21340
+    //                 },
+    //                 {
+    //                     category: "2019-06-01",
+    //                     formed: 3470,
+    //                     published: 23420
+    //                 },
+    //                 {
+    //                     category: "2019-07-01",
+    //                     formed: 23460,
+    //                     published: 32130
+    //                 },
+    //                 {
+    //                     category: "2019-08-01",
+    //                     formed: 33240,
+    //                     published: 52340
+    //                 },
+    //                 {
+    //                     category: "2019-09-01",
+    //                     formed: 2143,
+    //                     published: 1345
+    //                 },
+    //                 {
+    //                     category: "2019-10-01",
+    //                     formed: 5464,
+    //                     published: 3453
+    //                 },
+    //                 {
+    //                     category: "2019-11-01",
+    //                     formed: 352,
+    //                     published: 123
+    //                 },
+    //                 {
+    //                     category: "2019-12-01",
+    //                     formed: 13,
+    //                     published: 53
+    //                 }
+    //             ],
+    //             by_year: [{
+    //                     title: "Январь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 4563,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 345346,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Февраль 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Март 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Апрель 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 245000,
+    //                     po_and_consult: 4567
+    //                 },
+    //                 {
+    //                     title: "Май 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 55888,
+    //                     complex: 778,
+    //                     reports: 457,
+    //                     without_workers: 2000,
+    //                     salary: 567834,
+    //                     salary_and_ku: 393234,
+    //                     po_and_consult: 67593
+    //                 },
+    //                 {
+    //                     title: "Июнь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 356783,
+    //                     complex: 356,
+    //                     reports: 6795,
+    //                     without_workers: 3457,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3457
+    //                 },
+    //                 {
+    //                     title: "Июль 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 3674,
+    //                     complex: 5685,
+    //                     reports: 45683,
+    //                     without_workers: 3456,
+    //                     salary: 7887,
+    //                     salary_and_ku: 4567,
+    //                     po_and_consult: 708
+    //                 },
+    //                 {
+    //                     title: "Август 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 368,
+    //                     complex: 3356830,
+    //                     reports: 3568356,
+    //                     without_workers: 345,
+    //                     salary: 393634,
+    //                     salary_and_ku: 769,
+    //                     po_and_consult: 3457
+    //                 },
+    //                 {
+    //                     title: "Сентябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 55230,
+    //                     complex: 45,
+    //                     reports: 657,
+    //                     without_workers: 3456,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Октябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 56,
+    //                     complex: 3468,
+    //                     reports: 347,
+    //                     without_workers: 3457,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Ноябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 345734,
+    //                     complex: 43563,
+    //                     reports: 45636,
+    //                     without_workers: 7457,
+    //                     salary: 5464,
+    //                     salary_and_ku: 45645,
+    //                     po_and_consult: 234523
+    //                 },
+    //                 {
+    //                     title: "Декабрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 2345,
+    //                     complex: 2354,
+    //                     reports: 2354,
+    //                     without_workers: 4564,
+    //                     salary: 2354,
+    //                     salary_and_ku: 45645,
+    //                     po_and_consult: 2345
+    //                 }
+    //             ]
+    //         },
+    //         transfer_on_technology: {
+    //             total_revenues_data: [{
+    //                     month: "январь",
+    //                     revenue: 112
+    //                 },
+    //                 {
+    //                     month: "февраль",
+    //                     revenue: 236
+    //                 },
+    //                 {
+    //                     month: "март",
+    //                     revenue: 232
+    //                 },
+    //                 {
+    //                     month: "апрель",
+    //                     revenue: 334
+    //                 },
+    //                 {
+    //                     month: "май",
+    //                     revenue: 354
+    //                 },
+    //                 {
+    //                     month: "июнь",
+    //                     revenue: 354
+    //                 },
+    //                 {
+    //                     month: "июль",
+    //                     revenue: 453
+    //                 },
+    //                 {
+    //                     month: "август",
+    //                     revenue: 567
+    //                 },
+    //                 {
+    //                     month: "сентябрь",
+
+    //                     revenue: 134
+    //                 },
+    //                 {
+    //                     month: "октябрь",
+    //                     revenue: 679
+    //                 },
+    //                 {
+    //                     month: "ноябрь",
+    //                     revenue: 458
+    //                 },
+    //                 {
+    //                     month: "декабрь",
+    //                     revenue: 234
+    //                 }
+    //             ],
+    //             service_on_tariff_data: [{
+    //                     category: "2019-01-01",
+    //                     formed: 23540,
+    //                     published: 2345
+    //                 },
+    //                 {
+    //                     category: "2019-02-01",
+    //                     formed: 12340,
+    //                     published: 0
+    //                 },
+    //                 {
+    //                     category: "2019-03-01",
+    //                     formed: 1230,
+    //                     published: 2340
+    //                 },
+    //                 {
+    //                     category: "2019-04-01",
+    //                     formed: 12340,
+    //                     published: 3240
+    //                 },
+    //                 {
+    //                     category: "2019-05-01",
+    //                     formed: 2140,
+    //                     published: 21340
+    //                 },
+    //                 {
+    //                     category: "2019-06-01",
+    //                     formed: 3470,
+    //                     published: 23420
+    //                 },
+    //                 {
+    //                     category: "2019-07-01",
+    //                     formed: 23460,
+    //                     published: 32130
+    //                 },
+    //                 {
+    //                     category: "2019-08-01",
+    //                     formed: 33240,
+    //                     published: 52340
+    //                 },
+    //                 {
+    //                     category: "2019-09-01",
+    //                     formed: 2143,
+    //                     published: 1345
+    //                 },
+    //                 {
+    //                     category: "2019-10-01",
+    //                     formed: 5464,
+    //                     published: 3453
+    //                 },
+    //                 {
+    //                     category: "2019-11-01",
+    //                     formed: 352,
+    //                     published: 123
+    //                 },
+    //                 {
+    //                     category: "2019-12-01",
+    //                     formed: 13,
+    //                     published: 53
+    //                 }
+    //             ],
+    //             by_year: [{
+    //                     title: "Январь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 234235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 2354234,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 34574,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 6789,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 2314,
+    //                     complex: 3003462300,
+    //                     reports: 453245,
+    //                     without_workers: 2345,
+    //                     salary: 235,
+    //                     salary_and_ku: 6546,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Февраль 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 7890978,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 237890978456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 7890789,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 8790789,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 7890,
+    //                     complex: 306590000,
+    //                     reports: 780789,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Март 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 6890,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 6890,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 7890,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 789078,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 2000,
+    //                     po_and_consult: 2000
+    //                 },
+    //                 {
+    //                     title: "Апрель 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 5520,
+    //                     complex: 30000,
+    //                     reports: 10000,
+    //                     without_workers: 2000,
+    //                     salary: 2000,
+    //                     salary_and_ku: 245000,
+    //                     po_and_consult: 4567
+    //                 },
+    //                 {
+    //                     title: "Май 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 55888,
+    //                     complex: 778,
+    //                     reports: 457,
+    //                     without_workers: 2000,
+    //                     salary: 567834,
+    //                     salary_and_ku: 393234,
+    //                     po_and_consult: 67593
+    //                 },
+    //                 {
+    //                     title: "Июнь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 356783,
+    //                     complex: 356,
+    //                     reports: 6795,
+    //                     without_workers: 3457,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3457
+    //                 },
+    //                 {
+    //                     title: "Июль 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 3674,
+    //                     complex: 5685,
+    //                     reports: 45683,
+    //                     without_workers: 3456,
+    //                     salary: 7887,
+    //                     salary_and_ku: 4567,
+    //                     po_and_consult: 708
+    //                 },
+    //                 {
+    //                     title: "Август 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 368,
+    //                     complex: 3356830,
+    //                     reports: 3568356,
+    //                     without_workers: 345,
+    //                     salary: 393634,
+    //                     salary_and_ku: 769,
+    //                     po_and_consult: 3457
+    //                 },
+    //                 {
+    //                     title: "Сентябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 55230,
+    //                     complex: 45,
+    //                     reports: 657,
+    //                     without_workers: 3456,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Октябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 56,
+    //                     complex: 3468,
+    //                     reports: 347,
+    //                     without_workers: 3457,
+    //                     salary: 3457,
+    //                     salary_and_ku: 3457,
+    //                     po_and_consult: 3456
+    //                 },
+    //                 {
+    //                     title: "Ноябрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 345734,
+    //                     complex: 43563,
+    //                     reports: 45636,
+    //                     without_workers: 7457,
+    //                     salary: 5464,
+    //                     salary_and_ku: 45645,
+    //                     po_and_consult: 234523
+    //                 },
+    //                 {
+    //                     title: "Декабрь 2019",
+    //                     data: {
+    //                         profit: {
+    //                             count: 235,
+    //                             index: "plus"
+    //                         },
+    //                         losses: {
+    //                             count: 23456,
+    //                             index: "plus"
+    //                         },
+    //                         added_services: {
+    //                             count: 6756,
+    //                             index: "plus"
+    //                         },
+    //                         remove_services: {
+    //                             count: 3456,
+    //                             index: "minus"
+    //                         }
+    //                     },
+    //                     revenue: 2345,
+    //                     complex: 2354,
+    //                     reports: 2354,
+    //                     without_workers: 4564,
+    //                     salary: 2354,
+    //                     salary_and_ku: 45645,
+    //                     po_and_consult: 2345
+    //                 }
+    //             ]
+    //         }
+    //     }
+    // }
+
+    // store.commit('setDataHead', dataHead);
+    // store.commit('setDataClients', dataClients);
+    // store.commit('setDataRoyalty', dataRoyalty);
+    // store.commit('setDataDynamics', dataDynamics);
+</script>
+<script src="bundle.js"></script>
+
+</html>
