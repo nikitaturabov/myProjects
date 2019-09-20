@@ -1,0 +1,119 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.planning {
+  background: #E8F8C4;
+  padding: 2px 4px;
+  min-width: 1000px;
+}
+.planning__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.planning__item:first-child {
+  margin-bottom: 6px;
+}
+.top-line__item,
+.bottom-line__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+  margin: 0 6px;
+}
+.title-label--gray {
+  font-size: 11px;
+  line-height: 13px;
+  color: #9B9B9B;
+}
+.distribute-tasks__dot,
+.distribute-docs__dot,
+.expired__dot,
+.work__dot,
+.scheduled__dot,
+.scheduled__dot,
+.overload__dot,
+.underloadedDays__dot,
+.notUnderloadedDays__dot {
+  background: #00A5B2;
+}
+.distribute-tasks__name,
+.distribute-docs__name,
+.expired__name,
+.work__name,
+.scheduled__name,
+.scheduled__name,
+.overload__name,
+.underloadedDays__name,
+.notUnderloadedDays__name {
+  color: #1C55AE;
+  margin: 0 3px;
+  border-bottom: 1px solid #1C55AE;
+}
+.distribute-tasks__count,
+.distribute-docs__count,
+.expired__count,
+.work__count,
+.scheduled__count,
+.scheduled__count,
+.overload__count,
+.underloadedDays__count,
+.notUnderloadedDays__count {
+  color: #1C55AE;
+  text-decoration: none;
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 10px;
+}
+.name {
+  font-size: 11px;
+  line-height: 16px;
+}
+.count {
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 16px;
+}
+.alarm {
+  width: 16px;
+  height: 16px;
+  background-image: url(./images/АРБИС_Будильник.png);
+}
+.fact__item,
+.plan__item {
+  margin: 0;
+  padding: 0 3px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  width: 16px;
+  height: 16px;
+}
+.icon--man-play {
+  background-image: url(./images/АРБИС_СтатусЗадачаВРаботе.png);
+}
+.icon--man-cross {
+  background-image: url(./images/АРБИС_СтатусЗадачаОтменена.png);
+}
+.icon--question {
+  background-image: url("./images/Mask Group.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: -5px;
+}
+.icon--calendar {
+  background-image: url(./images/АРБИС_ПодсветитьГрафик.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*# sourceMappingURL=style.css.map*/

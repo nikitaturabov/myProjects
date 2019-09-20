@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="accounting">
+
+    </div>
+
+</body>
+
+<script>
+    var dataJSON = {
+        period: {
+            start: "01.01.2018",
+            end: "01.04.2018",
+            checkUK: true,
+            preparationStarted: true,
+            finished: true,
+            custumersCheckIsNotRelevant: 0,
+            unverifiedCustomers: 0,
+            actualityDate: "01.04.2018"
+        },
+        links: {
+            reference: "#",
+            print: "#",
+            dialogs: "#",
+            statistics: "#",
+            runСheckUnverified: "#",
+            runCheckNotActuality: "#",
+            assistant: "#",
+            runCheck: "#"
+        },
+        workingGroup: [
+            {
+          guid: "306abb09-27d9-4bde-9b6e-a428130add4a",
+          name: "Умка (УмкаПовелительРуководителей)",
+          quality: "top",
+          warning: 234,
+          countOrganization: 53,
+          bugs: {
+            average: 63,
+            critical: 70,
+            total: 5
+          },
+          protocols: {
+            filed: 53,
+            rejected: 46,
+            accepted: 95,
+            bugsRemoved: 37
+          }
+        },
+        {
+          guid: "306abb09-27d9-4bde-9b6e-a428130add4a",
+          name: "Jayo",
+          quality: "top",
+          warning: 234,
+          countOrganization: 53,
+          bugs: {
+            average: 63,
+            critical: 70,
+            total: 5
+          },
+          protocols: {
+            filed: 53,
+            rejected: 46,
+            accepted: 95,
+            bugsRemoved: 37
+          }
+        },
+        {
+          guid: "306abb09-27d9-4bde-9b6e-a428130add4a",
+          name: "Jayo",
+          quality: "top",
+          warning: 234,
+          countOrganization: 53,
+          bugs: {
+            average: 63,
+            critical: 70,
+            total: 5
+          },
+          protocols: {
+            filed: 53,
+            rejected: 46,
+            accepted: 95,
+            bugsRemoved: 37
+          }
+        },
+        {
+          guid: "306abb09-27d9-4bde-9b6e-a428130add4a",
+          name: "Jayo",
+          quality: "top",
+          warning: 234,
+          countOrganization: 53,
+          bugs: {
+            average: 63,
+            critical: 70,
+            total: 5
+          },
+          protocols: {
+            filed: 53,
+            rejected: 46,
+            accepted: 95,
+            bugsRemoved: 37
+          }
+        },
+        {
+          guid: "306abb09-27d9-4bde-9b6e-a428130add4a",
+          name: "Jayo",
+          quality: "top",
+          warning: 234,
+          countOrganization: 53,
+          bugs: {
+            average: 63,
+            critical: 70,
+            total: 5
+          },
+          protocols: {
+            filed: 53,
+            rejected: 46,
+            accepted: 95,
+            bugsRemoved: 37
+          }
+        },
+        {
+          guid: "306abb09-27d9-4bde-9b6e-a428130add4a",
+          name: "Jayo",
+          quality: "top",
+          warning: 234,
+          countOrganization: 53,
+          bugs: {
+            average: 63,
+            critical: 70,
+            total: 5
+          },
+          protocols: {
+            filed: 53,
+            rejected: 46,
+            accepted: 95,
+            bugsRemoved: 37
+          }
+        },
+        {
+          guid: "af201ee2-0daf-456e-88e3-3903dc674d66",
+          name: "Bubbletube",
+          quality: "top",
+          warning: 234,
+          countOrganization: 36,
+          bugs: {
+            average: 66,
+            critical: 3,
+            total: 40
+          },
+          protocols: {
+            filed: 29,
+            rejected: 1,
+            accepted: 26,
+            bugsRemoved: 66
+          }
+        },
+        {
+          guid: "1b351b55-98b4-429b-a94a-ef9f9d003431",
+          name: "Skyndu",
+          quality: "normal",
+          warning: 234,
+          countOrganization: 32,
+          bugs: {
+            average: 86,
+            critical: 0,
+            total: 92
+          },
+          protocols: {
+            filed: 84,
+            rejected: 67,
+            accepted: 41,
+            bugsRemoved: 94
+          }
+        },
+        {
+          guid: "a4a46721-cc3a-4e05-aa4a-1ec864743ddb",
+          name: "Shufflester",
+          quality: "bad",
+          warning: 234,
+          countOrganization: 1,
+          bugs: {
+            average: 73,
+            critical: 76,
+            total: 58
+          },
+          protocols: {
+            filed: 31,
+            rejected: 85,
+            accepted: 27,
+            bugsRemoved: 6
+          }
+        },
+        {
+          guid: "9b56ebc9-4e61-4598-87b8-b7e6b808221e",
+          name: "Feedbug",
+          quality: "normal",
+          warning: 234,
+          countOrganization: 30,
+          bugs: {
+            average: 36,
+            critical: 16,
+            total: 67
+          },
+          protocols: {
+            filed: 16,
+            rejected: 31,
+            accepted: 68,
+            bugsRemoved: 29
+          }
+        }
+      ],
+      criticalBugs: [
+        {
+          guid: "306abb09-27d9-4bde-9b6e-a428130add4a",
+          client:
+            'Общество с ограниченной ответственностью "СистемаТехноСтрой"',
+          tax: "Прибыль",
+          period: "01.01.2018 - 30.09.2018",
+          errorDescription:
+            "Проверка налоговой декларации по налогу на прибыль. Сумма по декларации (строка 120) 34 770 руб., сумма по данным отчета -1 497 502 руб. Сумма расхождений: 1 532 272 руб."
+        },
+        {
+          guid: "306abb09-27d9-4bde-9b6e-a428130add4a",
+          client:
+            'Общество с ограниченной ответственностью "СистемаТехноСтрой"',
+          tax: "Прибыль",
+          period: "01.01.2018 - 30.09.2018",
+          errorDescription:
+            "Проверка налоговой декларации по налогу на прибыль. Сумма по декларации (строка 120) 34 770 руб., сумма по данным отчета -1 497 502 руб. Сумма расхождений: 1 532 272 руб."
+        },
+        {
+          guid: "306abb09-27d9-4bde-9b6e-a428130add4a",
+          client:
+            'Общество с ограниченной ответственностью "СистемаТехноСтрой"',
+          tax: "Прибыль",
+          period: "01.01.2018 - 30.09.2018",
+          errorDescription:
+            "Проверка налоговой декларации по налогу на прибыль. Сумма по декларации (строка 120) 34 770 руб., сумма по данным отчета -1 497 502 руб. Сумма расхождений: 1 532 272 руб."
+        },
+        {
+          guid: "306abb09-27d9-4bde-9b6e-a428130add4a",
+          client:
+            'Общество с ограниченной ответственностью "СистемаТехноСтрой"',
+          tax: "Прибыль",
+          period: "01.01.2018 - 30.09.2018",
+          errorDescription:
+            "Проверка налоговой декларации по налогу на прибыль. Сумма по декларации (строка 120) 34 770 руб., сумма по данным отчета -1 497 502 руб. Сумма расхождений: 1 532 272 руб."
+        }
+      ],
+        diagrammSNO: [{
+                id: "empty",
+                category: "Не указана",
+                clients: 2,
+            },
+            {
+                id: "OSN",
+                category: "ОСН",
+                clients: 28
+            },
+            {
+                id: "income-expenses",
+                category: "УСН Доходы - расходы",
+                clients: 1
+            },
+            {
+                id: "income",
+                category: "УСН Доходы",
+                clients: 5
+            }
+        ],
+        diagrammRevenue: [{
+                id: "zero",
+                category: "0 руб.",
+                clients: 77
+            },
+            {
+                id: "one_million",
+                category: "менее 1 млн руб.",
+                clients: 23
+            },
+            {
+                id: "to_ten",
+                category: "от 1 до 10 млн руб.",
+                clients: 345
+            },
+            {
+                id: "to_twenty",
+                category: "от 10 до 20 млн руб.",
+                clients: 456
+            },
+            {
+                id: "to_thirty",
+                category: "от 20 до 30 млн руб.",
+                clients: 325
+            },
+            {
+                id: "to_fifty",
+                category: "от 40 до 50 млн руб.",
+                clients: 524
+            },
+            {
+                id: "to_ninety",
+                category: "от 80 до 90 млн руб.",
+                clients: 345
+            }
+        ]
+    }
+</script>
+
+<script src="bundle.js"></script>
+
+</html>

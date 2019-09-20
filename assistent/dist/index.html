@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+    </div>
+</body>
+
+<script>
+    var data = {
+        stage: 4,
+        headline: "Клиенты с приостановкой обслуживания",
+        iconHelp: true,
+        helpText: "<h3>В Централизованный аудит за 2018 год попадут клиенты, соответствующие условиям:</h3><ul><li>Юридические лица на тарифе “Комплексный сервис”</li><li>ИП на тарифе“ Комплексный сервис” на общей системе налогообложения</li><li>Дата начала обслуживания по договору регулярных услуг до 31.12 .2018</li><li>Договор действует на текущую дату(нет приостановки обслуживания или соглашения о расторжении)</li><li>Зарегистрировано приложение БП3р в сервисе</li></ul>",
+        benchmarks: {
+            mainNumber: 75,
+            mainSubscription: "Клиентов в проверке",
+            subBenchmarks: [{
+                    number: 75,
+                    subscription: "клиентов попадут в ЦА"
+                },
+                {
+                    number: 2,
+                    subscription: "договора восстановления учета попадут в ЦА"
+                },
+                {
+                    number: 75,
+                    subscription: "клиентов попадут в ЦА"
+                },
+                {
+                    number: 2,
+                    subscription: "договора восстановления учета попадут в ЦА"
+                },
+            ],
+        },
+        messages: [{
+                type: "incoming",
+                text: "Правильно?"
+            },
+            {
+                type: "outgoing",
+                text: "Да!"
+            },
+            {
+                type: "incoming_final",
+                text: "Вопрос решён"
+            },
+        ],
+        options: [{
+
+                text: "Да, перейти далее?",
+                popular: true,
+                visited: false,
+                buttonFinal: true,
+                url: "#"
+            },
+            {
+
+                text: "Я восстанавливаю учет за 2018 год",
+                popular: false,
+                visited: false,
+                buttonFinal: true,
+                url: "#"
+            },
+            {
+
+                text: "Обновите, я внес правки",
+                popular: false,
+                visited: false,
+                buttonFinal: true,
+                url: "#"
+            },
+            {
+
+                text: "Нет, у меня в списке лишние договоры",
+                popular: false,
+                visited: true,
+                buttonFinal: true,
+                url: "#"
+            },
+            {
+
+                text: "Нет, не хватает нужных договоров",
+                popular: false,
+                visited: false,
+                buttonFinal: true,
+                url: "#"
+            },
+        ],
+        buttonBack: {
+            view: true,
+            link: "#"
+        },
+        buttonForward: {
+            view: true,
+            link: "#"
+        },
+        buttonFinal: {
+            view: false,
+            link: "testtest"
+        },
+        goToCheckList:{
+            view: false,
+            link: "testtest"
+        },
+        nextCA:{
+            dateAgreement: '31.12.2018',
+            dateNext: 'августе 2019',
+            year: "2018 год",
+            view: true,
+            buttonCloseLink: "#"
+        }
+    };
+
+    //store.commit('setData', data);
+    //store.commit('setMessage', message)
+    //store.commit('setOptions', options)
+    //store.commit('setButtonGoToCheckList', true)
+</script>
+<script src="bundle.js"></script>
+
+
+
+</html>
